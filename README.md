@@ -122,7 +122,7 @@ runBioFOA("spectral", 10, 1)
 NMI: 0.8900
 ARI: 0.9100
 ``` -->
-> **Note: `OmiDos` is still under development, please see [API reference](https://depf.readthedocs.io/en/latest/runHA.R.html#) for the latest list.**
+<!-- > **Note: `OmiDos` is still under development, please see [API reference](https://depf.readthedocs.io/en/latest/runHA.R.html#) for the latest list.** -->
 
 ## Contact:
 Thank you for using OmiDos! Any questions, suggestions or advices are welcome.
