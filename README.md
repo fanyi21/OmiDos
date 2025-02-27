@@ -43,7 +43,7 @@ Release:
 
 ***OmiDos:*** Here, we introduce OmiDos, a novel **dynamic orthogonal deep generative model**, specifically designed to **disentangle shared and unique molecular signatures** across multi-omics layers in single-cell multi-omics data. Unlike prior methods that rely on simplistic assumptions about shared features, OmiDos leverages **deep transfer learning** to extract invariant shared signals from paired data while enforcing **orthogonality constraints** to separate modality-specific signals into distinct latent spaces. To address unpaired data, OmiDos incorporates an **adversarial discriminator** combined with **noise contrastive estimation**. Furthermore, OmiDos features a decoder layer enhanced by a **maximum mean discrepancy regularization**, enabling robust batch correction across diverse experimental conditions.. 
 
-<img src="./frramwork/framework_v1_2.png" alt = "overview" style="zoom:50%" align = center />
+<img src="./framework/framework_v1_2.png" alt = "overview" style="zoom:50%" align = center />
 
 The key highlights of our work are:
 - &#x1F31E; ***OmiDos Elevates Cell Type Discovery through Private Embedding to Shared Embedding Transfer***. By incorporating both private and shared embeddings, OmiDos enhances the resolution of cellular heterogeneity, facilitating the identification of potentially novel cell populations.
@@ -91,7 +91,7 @@ $ python setup.py install
  &#x1F341; In a mouse secondary palate development dataset, **OmiDos** precisely identified a critical enhancer at the genomic locus chr16: 32697085-32697585, elucidating its essential role in regulating \emph{Muc4} expression. Its activity strongly correlates with the regulatory dynamics observed in E13.5 and E14.5 epithelial cell differentiation and migration..
 ```shell
 $ cd OmiDos/Analysis/
-$ run notbook
+$ run notebook
 ```
 <!-- &#x1F341; ***Step 2***: Selecting a basic clustering algorithm to generate a clustering ensemble. DEPF provides three basic clustering algorithms, including ***Louvain***, ***Leiden***, and ***spectral clustering***.
 - &#x1F346; ***Louvain***. The ***Louvain_resolution_1.csv*** is produced and saved in the ***./OutputData***.
