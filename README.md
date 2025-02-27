@@ -1,27 +1,27 @@
 <h2 align="center">
-DEPF: Reliable Identification and Interpretation of Single-cell Molecular Heterogeneity and Transcriptional Regulation using Dynamic Ensemble Pruning
+OmiDos: Dissecting Private and Shared Signatures of Single-Cell Multi-Omics Data with Dynamic Orthogonal Deep Generative Model
 </h2>
 
 <p align="center">
-  <a href="https://github.com/fanyi21/DEPF">
+  <a href="https://github.com/fanyi21/OmiDos">
     <img src="https://img.shields.io/badge/DEPF-R&MATLAB&Cpp-orange">
   </a>
   <a href='https://depf.readthedocs.io/en/latest/'>
     <img src='https://readthedocs.org/projects/depf/badge/?version=latest' alt='Documentation Status' />
   </a>
-  <a href="https://github.com/fanyi21/DEPF/stargazers">
-    <img src="https://img.shields.io/github/stars/fanyi21/DEPF">
+  <a href="https://github.com/fanyi21/OmiDos/stargazers">
+    <img src="https://img.shields.io/github/stars/fanyi21/OmiDos">
   </a>
-  <a href="https://github.com/fanyi21/DEPF/network/members">
-    <img src="https://img.shields.io/github/forks/fanyi21/DEPF">
+  <a href="https://github.com/fanyi21/OmiDos/network/members">
+    <img src="https://img.shields.io/github/forks/fanyi21/OmiDos">
   </a>
-  <a href="https://github.com/fanyi21/DEPF/issues">
-    <img src="https://img.shields.io/github/issues/fanyi21/DEPF">
+  <a href="https://github.com/fanyi21/OmiDos/issues">
+    <img src="https://img.shields.io/github/issues/fanyi21/OmiDos">
   </a>
-  <a href="https://github.com/fanyi21/DEPF/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/fanyi21/DEPF">
+  <a href="https://github.com/fanyi21/OmiDos/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/fanyi21/OmiDos">
   </a>
-  <a href="https://github.com/fanyi21/DEPF/graphs/traffic">
+  <a href="https://github.com/fanyi21/OmiDos/graphs/traffic">
     <img src="https://visitor-badge.glitch.me/badge?page_id=fanyi21.DEPF">
   </a>
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
@@ -31,7 +31,7 @@ DEPF: Reliable Identification and Interpretation of Single-cell Molecular Hetero
 
 
 Release: 
-  <a href="https://github.com/fanyi21/DEPF/tree/main/DEPF">Source</a>
+  <a href="https://github.com/fanyi21/OmiDos/tree/main/OmiDos">Source</a>
   
   Links:
   <a href="https://depf.readthedocs.io/en/latest/Description.html">Getting Started</a> |
@@ -41,20 +41,20 @@ Release:
 
 
 
-***DEPF:*** A **dynamic ensemble pruning framework (DEPF)** is proposed to identify and interpret single-cell molecular heterogeneity. In particular, a **silhouette coefficient-based indicator** is developed and evaluated to determine the optimization direction of the bi-objective function. In addition, a **hierarchical autoencoder** is employed to project the high-dimensional scRNA-seq data onto multiple low-dimensional latent space sets, and then a **clustering ensemble** is produced in the latent space by the basic clustering algorithm. Following that, a **bi-objective fruit fly optimization algorithm** is designed to prune dynamically the low-quality basic clustering in the ensemble. 
+***OmiDos:*** Here, we introduce OmiDos, a novel **dynamic orthogonal deep generative model**, specifically designed to **disentangle shared and unique molecular signatures** across multi-omics layers in single-cell multi-omics data. Unlike prior methods that rely on simplistic assumptions about shared features, OmiDos leverages **deep transfer learning** to extract invariant shared signals from paired data while enforcing **orthogonality constraints** to separate modality-specific signals into distinct latent spaces. To address unpaired data, OmiDos incorporates an **adversarial discriminator** combined with **noise contrastive estimation**. Furthermore, OmiDos features a decoder layer enhanced by a **maximum mean discrepancy regularization**, enabling robust batch correction across diverse experimental conditions.. 
 
-<img src="./docs/figure/DEPFframework.png" alt = "overview" style="zoom:100%" align = center />
+<img src="./frramwork/framework_v1_2.png" alt = "overview" style="zoom:100%" align = center />
 
-***DEPF*** is constructed based on four modules (***Normalization, Hierarchical Autoencoder, Clustering Ensemble,  Dynamic Ensemble Pruning***) developed by ourselves. It provides five **highlights**:
-- &#x1F31E; ***Dynamic ensemble pruning***: many could be better than all.
-- &#x1F34E; ***DEPF*** can identify rare cell types and small clusters that would not be picked up by other methods.
-- &#x1F31E; ***DEPF*** can identify novel clusters that other traditional methods failed to detect.
-- &#x1F34E; ***DEPF*** can provide biological interpretation of scRNA-seq data.
-- &#x1F31E; ***DEPF*** can discover transcriptional and post-transcriptional regulators in scRNA-seq data.
+The key highlights of our work are:
+- &#x1F31E; ***OmiDos*** Elevates Cell Type Discovery through Private Embedding to Shared Embedding Transfer. By incorporating both private and shared embeddings, OmiDos enhances the resolution of cellular heterogeneity, facilitating the identification of potentially novel cell populations.
+- &#x1F31E; ***OmiDos*** Deciphers Regulatory Programs by Leveraging Private Embedding to Enhance the Signatures in the Shared Embedding. The features captured in the private embedding enhance the signal in the shared embedding, leading to the annotation of a potential enhancer. Its activity strongly correlates with the regulatory dynamics observed in E13.5 and E14.5 epithelial cell differentiation and migration.
+- &#x1F34E; ***OmiDos*** Mitigates Batch Effects while Preserving Regulatory Signals. OmiDos not only balanced batch correction but also preserved the regulatory signals necessary for accurate cell type resolution across both modalities. Additionally, it accurately identifies cell-type-specific regulatory elements across immune cell populations, ensuring biologically meaningful integration.
+- &#x1F31E; ***OmiDos*** Reduces Unpaired-Specific Biases to Infer Cell Lineages. OmiDos effectively integrates unpaired multi-omics data, ensuring optimal cell type alignment across modalities while preserving distinct cell lineage structures. The shared embedding revealed significant cell lineage relationships, confirming that OmiDos maintains expected biological associations while mitigating biases associated with unpaired data.
+- &#x1F34E;  ***OmiDos*** Captures Cancer-specific Epigenome for Medulloblastoma Progression. In a targeted application to the Sonic Hedgehog medulloblastoma mouse model, OmiDos identified a critical regulatory shift from reliance on distal regulatory elements during early development to a preference for proximal elements in the tumor stage, delineating a dynamic transition essential for understanding tumor progression.
 
 
-## Getting Started
-<img src="./docs/figure/ModularityOfDEPF.png" alt = "DEPF" style="zoom:100%" align = center />
+<!-- ## Getting Started
+<img src="./docs/figure/ModularityOfDEPF.png" alt = "DEPF" style="zoom:100%" align = center /> -->
 
 ## Table of Contents
 
@@ -64,22 +64,19 @@ Release:
 ### Installation
 It is recommended to use **git** for installation.  
 ```shell
-# create a virtual environment named DEPF
-$ conda create -n DEPF    
+# create a virtual environment named OmiDos
+$ conda create -n OmiDos    
 # activate the environment       
-$ conda activate DEPF   
+$ conda activate OmiDos   
 # install R enviroment
 $ conda install -c conda-forge r-base=4.1.3
 $ conda install -c conda-forge r-devtools
 $ conda install -c conda-forge r-seurat
 $ conda install python=3.9
 $ pip install leidenalg
-# install MATLAB according to the official website tutorial
-# clone DEPF repository                  
-$ git clone https://github.com/fanyi21/DEPF.git
+# clone OmiDos repository                  
+$ git clone https://github.com/fanyi21/OmiDos.git
 # # install the dependencies
-$ cd DEPF/DEPF/HierarchicalAutoencoder/
-$ Rscript RequirePackage.R
 ```
 ### Example
  &#x1F341; ***Step 1***: Normalizing and mapping the raw scRNA-seq data to multiple low-dimensional latent spaces. A ***9_latent_data*** folder is produced and saved in the ***./OutputData***.
