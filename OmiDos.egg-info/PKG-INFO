@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: OmiDos
+Version: 0.1.0
+Summary: we introduce OmiDos, a novel dynamic orthogonal deep generative model, specifically designed to disentangle shared and unique molecular signatures across multi-omics layers in single-cell multi-omics data.
+Author: Yi Fan
+Requires-Python: >=3.6
